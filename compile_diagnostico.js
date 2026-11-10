@@ -602,9 +602,8 @@ const htmlContent = `<!doctype html>
     // 1. ESTRUTURA DE ETAPAS E PERGUNTAS (10 ETAPAS ORIGINAIS)
     const steps = ${JSON.stringify(questions, null, 2)};
 
-    // 2. CONFIGURAÇÃO FUTURA DO GOOGLE SHEETS (WEBHOOK)
-    // Para conectar à planilha (Google Apps Script, Make ou n8n), basta colar a URL aqui:
-    const GOOGLE_SHEETS_WEBHOOK_URL = '';
+    // 2. CONFIGURAÇÃO DO GOOGLE SHEETS (WEBHOOK)
+    const GOOGLE_SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyBlc_FDB-Y_W-B9x3mDyHF9yFzeIcdDlpi5vb6YOq-_PBd5nNPwZHjoO_we3tGb1ARVg/exec';
 
     async function sendDataToWebhook(payload) {
       if (!GOOGLE_SHEETS_WEBHOOK_URL) {
