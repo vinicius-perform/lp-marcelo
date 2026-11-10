@@ -311,14 +311,13 @@
       }
     }
   }
-  const attributionKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'msclkid'];
+  const attributionKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'msclkid', 'ad_id', 'ad_name', 'adset_id', 'adset_name', 'campaign_id', 'campaign_name'];
   const incoming = new URLSearchParams(window.location.search);
   const diagnosticLinks = [...document.querySelectorAll('a[data-conversion]')];
   function updateDiagnosticLinks() {
     diagnosticLinks.forEach(link => {
       const url = new URL('/diagnostico', window.location.origin);
-      attributionKeys.forEach(key => {
-        const value = incoming.get(key);
+      incoming.forEach((value, key) => {
         if (value) url.searchParams.set(key, value);
       });
       if (!url.searchParams.has('utm_source')) url.searchParams.set('utm_source', 'site_marcelo');

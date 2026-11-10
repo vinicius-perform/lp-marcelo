@@ -623,12 +623,19 @@ const htmlContent = `<!doctype html>
       }
     }
 
-    // 3. CAPTURA DE PARÂMETROS DE RASTREIO (UTMs / FBCLID)
+    // 3. CAPTURA DE PARÂMETROS DE RASTREIO (UTMs / FBCLID / META ADS)
     const incomingParams = new URLSearchParams(window.location.search);
     const attributionData = {};
-    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'cta', 'metodo'].forEach(key => {
+    [
+      'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
+      'gclid', 'fbclid', 'cta', 'metodo',
+      'ad_id', 'ad_name', 'adset_id', 'adset_name', 'campaign_id', 'campaign_name'
+    ].forEach(key => {
       const val = incomingParams.get(key);
       if (val) attributionData[key] = val;
+    });
+    incomingParams.forEach((val, key) => {
+      if (val && !attributionData[key]) attributionData[key] = val;
     });
 
     // 4. ESTADO DA APLICAÇÃO
@@ -916,6 +923,12 @@ const htmlContent = `<!doctype html>
           email: answers.email || '',
           whatsapp: answers.whatsapp || '',
           cidade: answers.cidade || '',
+          campaign_id: attributionData.campaign_id || '',
+          campaign_name: attributionData.campaign_name || '',
+          adset_id: attributionData.adset_id || '',
+          adset_name: attributionData.adset_name || '',
+          ad_id: attributionData.ad_id || '',
+          ad_name: attributionData.ad_name || '',
           ...attributionData
         });
       }
@@ -960,6 +973,12 @@ const htmlContent = `<!doctype html>
         email: answers.email || '',
         whatsapp: answers.whatsapp || '',
         cidade: answers.cidade || '',
+        campaign_id: attributionData.campaign_id || '',
+        campaign_name: attributionData.campaign_name || '',
+        adset_id: attributionData.adset_id || '',
+        adset_name: attributionData.adset_name || '',
+        ad_id: attributionData.ad_id || '',
+        ad_name: attributionData.ad_name || '',
         respostas: answers,
         ...attributionData
       });
