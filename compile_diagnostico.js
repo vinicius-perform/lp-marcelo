@@ -905,13 +905,16 @@ const htmlContent = `<!doctype html>
         leadFired = true;
         localStorage.setItem('mvx_diag_lead_fired', 'true');
 
+        const testCode = incomingParams.get('test_event_code');
+        const fbqOptions = testCode ? { test_event_code: testCode } : {};
+
         if (typeof window.fbq === 'function') {
           window.fbq('track', 'Lead', {
             content_name: 'Diagnóstico Dr. Marcelo - Etapa 1',
             currency: 'BRL',
             value: 0
-          });
-          console.log('[Meta Pixel] Evento "Lead" disparado com sucesso na Etapa 1.');
+          }, fbqOptions);
+          console.log('[Meta Pixel] Evento "Lead" disparado com sucesso na Etapa 1.', fbqOptions);
         }
 
         // Registra lead preparado para posterior envio ao Google Sheets
@@ -956,12 +959,16 @@ const htmlContent = `<!doctype html>
 
     // 12. FINALIZAR DIAGNÓSTICO
     function finishDiagnostic() {
+      const testCode = incomingParams.get('test_event_code');
+      const fbqOptions = testCode ? { test_event_code: testCode } : {};
+
       if (typeof window.fbq === 'function') {
         window.fbq('track', 'CompleteRegistration', {
           content_name: 'Diagnóstico Dr. Marcelo - Concluído',
           currency: 'BRL',
           value: 0
-        });
+        }, fbqOptions);
+        console.log('[Meta Pixel] Evento "CompleteRegistration" disparado com sucesso.', fbqOptions);
       }
 
       // Envia respostas completas para a futura integração com Google Sheets
