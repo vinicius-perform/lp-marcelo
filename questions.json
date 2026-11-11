@@ -38,7 +38,7 @@
     "id": "sobre-voce",
     "index": "01",
     "title": "Sobre você",
-    "description": "Vamos começar entendendo sua formação e sua rotina profissional.",
+    "description": "Conte-nos brevemente sobre sua formação profissional.",
     "questions": [
       {
         "id": "q1",
@@ -54,38 +54,9 @@
         ]
       },
       {
-        "id": "q2",
-        "label": "Há quanto tempo você concluiu sua graduação?",
-        "kind": "single",
-        "required": true,
-        "options": [
-          "Menos de 2 anos",
-          "De 2 a 5 anos",
-          "De 5 a 10 anos",
-          "Mais de 10 anos"
-        ]
-      },
-      {
         "id": "q3",
         "label": "Possui residência, especialização ou alguma formação complementar relevante?",
         "hint": "Se sim, conte-nos qual.",
-        "kind": "text"
-      },
-      {
-        "id": "q4",
-        "label": "Como é a sua atuação profissional atualmente?",
-        "hint": "Conte-nos brevemente como está dividida sua rotina entre plantões, consultório, clínica, procedimentos, gestão ou outras atividades.",
-        "kind": "text"
-      },
-      {
-        "id": "q5",
-        "label": "Caso realize plantões, aproximadamente quantos você faz por mês?",
-        "kind": "text",
-        "placeholder": "Ex.: 8 plantões por mês"
-      },
-      {
-        "id": "q6",
-        "label": "Atualmente, quais são suas principais fontes de renda profissional?",
         "kind": "text"
       }
     ]
@@ -94,43 +65,13 @@
     "id": "momento-atual",
     "index": "02",
     "title": "Momento atual",
-    "description": "Não existem respostas certas ou erradas — quanto mais transparente, melhor.",
+    "description": "Identifique o que tem impactado sua trajetória até aqui.",
     "questions": [
-      {
-        "id": "q7",
-        "label": "Hoje, qual dessas situações mais representa o seu momento profissional?",
-        "kind": "single",
-        "required": true,
-        "options": [
-          "Estou começando minha carreira",
-          "Tenho uma boa renda, mas ainda dependo muito de plantões",
-          "Tenho consultório, mas quero aumentar minha demanda",
-          "Tenho uma clínica e quero melhorar gestão e resultados",
-          "Tenho um negócio estruturado e quero escalar",
-          "Quero criar novas fontes de receita",
-          "Tenho bons resultados, mas quero trabalhar menos e ganhar mais",
-          "Outro"
-        ]
-      },
-      {
-        "id": "q8",
-        "label": "De 0 a 10, qual é o seu nível de satisfação com o momento atual da sua carreira ou negócio?",
-        "kind": "scale"
-      },
-      {
-        "id": "q9",
-        "label": "Qual é o principal desafio que você enfrenta hoje?",
-        "kind": "text"
-      },
-      {
-        "id": "q10",
-        "label": "Se pudesse resolver apenas UM problema profissional nos próximos 90 dias, qual seria?",
-        "kind": "text"
-      },
       {
         "id": "q11",
         "label": "O que você acredita que mais está limitando o seu crescimento atualmente?",
-        "kind": "single",
+        "hint": "Você pode selecionar mais de uma opção.",
+        "kind": "multi",
         "options": [
           "Falta de posicionamento",
           "Pouca captação de pacientes/clientes",
@@ -150,78 +91,16 @@
     ]
   },
   {
-    "id": "estrutura",
-    "index": "03",
-    "title": "Estrutura e crescimento",
-    "questions": [
-      {
-        "id": "q12",
-        "label": "Atualmente você possui consultório, clínica ou empresa própria?",
-        "hint": "Se sim, conte-nos brevemente sobre a estrutura.",
-        "kind": "text"
-      },
-      {
-        "id": "q13",
-        "label": "Você possui equipe?",
-        "hint": "Se sim, quantas pessoas aproximadamente e quais são as principais funções?",
-        "kind": "text"
-      },
-      {
-        "id": "q14",
-        "label": "Hoje existe um processo estruturado para transformar interessados em pacientes/clientes?",
-        "kind": "single",
-        "options": [
-          "Sim, bem estruturado",
-          "Existe, mas precisa melhorar",
-          "Muito pouco",
-          "Não existe"
-        ]
-      },
-      {
-        "id": "q15",
-        "label": "Você utiliza alguma ferramenta para acompanhar pacientes, leads e oportunidades, como CRM?",
-        "kind": "single",
-        "options": [
-          "Sim",
-          "Não",
-          "Não sei exatamente como funciona um CRM"
-        ]
-      },
-      {
-        "id": "q16",
-        "label": "Como você avalia atualmente sua presença e posicionamento nas redes sociais?",
-        "kind": "single",
-        "options": [
-          "Ainda não utilizo profissionalmente",
-          "Estou começando",
-          "Produzo conteúdo, mas sem estratégia definida",
-          "Tenho presença consolidada, mas quero crescer",
-          "Minhas redes sociais já geram pacientes/clientes de forma consistente"
-        ]
-      },
-      {
-        "id": "q17",
-        "label": "Você já utiliza Inteligência Artificial no seu trabalho ou negócio?",
-        "kind": "single",
-        "options": [
-          "Ainda não",
-          "Utilizo ocasionalmente",
-          "Utilizo com frequência",
-          "Já faz parte dos processos da minha empresa"
-        ]
-      }
-    ]
-  },
-  {
     "id": "financeiro",
-    "index": "04",
+    "index": "03",
     "title": "Financeiro",
-    "description": "Essas informações são utilizadas exclusivamente para entendermos o seu estágio atual.",
+    "description": "Seu patamar atual e objetivos para a próxima fase.",
     "questions": [
       {
         "id": "q18",
         "label": "Considerando todas as suas atividades profissionais, em qual faixa está aproximadamente sua receita/faturamento médio mensal atual?",
         "kind": "single",
+        "required": true,
         "options": [
           "Até R$ 10 mil",
           "De R$ 10 mil a R$ 20 mil",
@@ -237,194 +116,28 @@
       {
         "id": "q19",
         "label": "Qual seria uma meta de faturamento mensal que representaria um próximo nível importante para você?",
-        "kind": "text"
-      },
-      {
-        "id": "q20",
-        "label": "Pensando em curto, médio e longo prazo, onde você gostaria de chegar profissional e financeiramente?",
-        "kind": "text"
-      }
-    ]
-  },
-  {
-    "id": "futuro",
-    "index": "05",
-    "title": "Visão de futuro",
-    "questions": [
-      {
-        "id": "q21",
-        "label": "Imagine que nos encontramos novamente daqui a 12 meses e você considera que esse foi um dos melhores anos da sua carreira. O que precisaria ter acontecido?",
-        "kind": "text"
-      },
-      {
-        "id": "q22",
-        "label": "Além do crescimento financeiro, o que você mais deseja conquistar?",
-        "hint": "Você pode selecionar mais de uma.",
-        "kind": "multi",
-        "options": [
-          "Mais liberdade de tempo",
-          "Reduzir ou abandonar os plantões",
-          "Ter mais pacientes particulares",
-          "Construir autoridade",
-          "Estruturar minha clínica",
-          "Criar novos produtos ou serviços",
-          "Construir uma equipe",
-          "Abrir uma clínica",
-          "Expandir para outras cidades",
-          "Trabalhar menos mantendo ou aumentando minha renda",
-          "Outro"
-        ]
-      },
-      {
-        "id": "q23",
-        "label": "Você pretende realizar alguma residência, especialização ou subespecialização nos próximos anos?",
-        "hint": "Se sim, qual?",
-        "kind": "text"
-      },
-      {
-        "id": "q24",
-        "label": "Quanto tempo você acredita que conseguiria dedicar semanalmente à implementação de novas estratégias?",
-        "kind": "single",
-        "options": [
-          "Menos de 2 horas",
-          "De 2 a 5 horas",
-          "De 5 a 10 horas",
-          "Mais de 10 horas"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "tentativas",
-    "index": "06",
-    "title": "Tentativas anteriores",
-    "questions": [
-      {
-        "id": "q25",
-        "label": "Você já investiu anteriormente em cursos, mentorias, consultorias ou capacitações voltadas para carreira, gestão, marketing ou negócios?",
-        "kind": "single",
-        "options": [
-          "Nunca",
-          "Sim, uma vez",
-          "Algumas vezes",
-          "Invisto frequentemente em capacitação"
-        ]
-      },
-      {
-        "id": "q26",
-        "label": "Caso já tenha investido, o que funcionou e o que você sentiu que faltou?",
-        "kind": "text"
-      },
-      {
-        "id": "q27",
-        "label": "Você já tentou alguma estratégia para aumentar seu faturamento ou acelerar seu crescimento profissional?",
-        "hint": "Se sim, conte-nos brevemente sobre a experiência.",
-        "kind": "text"
-      }
-    ]
-  },
-  {
-    "id": "mentoria",
-    "index": "07",
-    "title": "Sobre a Mentoria",
-    "questions": [
-      {
-        "id": "q28",
-        "label": "Como você conheceu o Dr. Marcelo?",
-        "kind": "single",
-        "options": [
-          "Instagram",
-          "YouTube",
-          "Indicação",
-          "Evento/Palestra",
-          "Outro médico ou profissional",
-          "Já acompanho há algum tempo",
-          "Outro"
-        ]
-      },
-      {
-        "id": "q29",
-        "label": "O que chamou sua atenção no trabalho ou na trajetória do Dr. Marcelo?",
-        "kind": "text"
-      },
-      {
-        "id": "q30",
-        "label": "Por que você acredita que este pode ser o momento certo para buscar ajuda para o seu próximo nível profissional?",
-        "kind": "text"
-      },
-      {
-        "id": "q31",
-        "label": "Em quais áreas você acredita que mais precisa de orientação neste momento?",
-        "hint": "Você pode selecionar mais de uma.",
-        "kind": "multi",
-        "options": [
-          "Estratégia de carreira",
-          "Posicionamento",
-          "Marketing",
-          "Vendas",
-          "Gestão",
-          "CRM e relacionamento com pacientes",
-          "Inteligência Artificial",
-          "Criação de produtos e serviços",
-          "Formação de equipe",
-          "Liderança",
-          "Processos",
-          "Expansão da clínica",
-          "Organização financeira",
-          "Mentalidade empresarial",
-          "Outro"
-        ]
+        "kind": "text",
+        "placeholder": "Ex: R$ 80.000 / mês"
       }
     ]
   },
   {
     "id": "comprometimento",
-    "index": "08",
+    "index": "04",
     "title": "Comprometimento",
+    "description": "Alinhamento para o seu próximo passo como empresário(a).",
     "questions": [
-      {
-        "id": "q32",
-        "label": "De 0 a 10, qual é a sua prioridade em transformar sua realidade profissional nos próximos 12 meses?",
-        "kind": "scale"
-      },
-      {
-        "id": "q33",
-        "label": "Caso identifiquemos um caminho compatível com seus objetivos, qual dessas frases melhor representa o seu momento?",
-        "kind": "single",
-        "options": [
-          "Estou apenas conhecendo possibilidades",
-          "Quero entender o que preciso fazer antes de tomar uma decisão",
-          "Estou buscando uma solução e pretendo começar nos próximos meses",
-          "Quero começar o quanto antes"
-        ]
-      },
       {
         "id": "q34",
         "label": "Se identificarmos que a mentoria é adequada ao seu momento e existe um plano claro, você estaria disposto(a) a investir recursos, tempo e energia para implementá-lo?",
         "kind": "single",
+        "required": true,
         "options": [
           "Sim",
           "Depende da proposta e do formato",
           "Ainda não sei",
           "Neste momento, não"
         ]
-      }
-    ]
-  },
-  {
-    "id": "finalizar",
-    "index": "09",
-    "title": "Para finalizar",
-    "questions": [
-      {
-        "id": "q35",
-        "label": "Existe alguma informação sobre você, sua carreira ou seu negócio que não perguntamos e que seria importante conhecermos antes da nossa conversa?",
-        "kind": "text"
-      },
-      {
-        "id": "q36",
-        "label": "Complete a frase: “Se o Dr. Marcelo pudesse me ajudar a resolver uma única coisa hoje, eu gostaria que fosse…”",
-        "kind": "text"
       }
     ]
   }

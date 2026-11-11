@@ -174,7 +174,7 @@ const htmlContent = `<!doctype html>
     .progress-fill {
       height: 100%;
       background: var(--gold);
-      width: 10%;
+      width: 20%;
       transition: width 0.35s var(--ease);
     }
 
@@ -547,8 +547,8 @@ const htmlContent = `<!doctype html>
     <div id="diagnostic-app">
       <div class="progress-section">
         <div class="progress-row">
-          <span id="step-counter">ETAPA 1 DE 10</span>
-          <span class="pct" id="step-pct">10%</span>
+          <span id="step-counter">ETAPA 1 DE 5</span>
+          <span class="pct" id="step-pct">20%</span>
         </div>
         <div class="progress-track">
           <div class="progress-fill" id="progress-bar"></div>
