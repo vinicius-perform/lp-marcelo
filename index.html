@@ -91,13 +91,13 @@
         <span>MARCELO<br><strong>VASCONCELOS</strong></span>
       </a>
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="#metodos">Os métodos</a><a href="#pilares">Os pilares</a><a href="#resultados">Resultados</a><a href="#sobre">O mentor</a>
+        <a href="#metodos">Os métodos</a><a href="#pilares">Os pilares</a><a href="#resultados">Resultados</a><a href="#sobre">O mentor</a><a href="/comunicado">Comunicado</a>
       </nav>
       <a class="header-cta" href="/diagnostico" data-conversion="header">Fazer meu diagnóstico <svg class="icon"><use href="#arrow-up"/></svg></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><span></span><span></span></button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação no celular" hidden>
-      <a href="#metodos">Os métodos <span>01</span></a><a href="#pilares">Os seis pilares <span>02</span></a><a href="#resultados">Resultados <span>03</span></a><a href="#sobre">O mentor <span>04</span></a>
+      <a href="#metodos">Os métodos <span>01</span></a><a href="#pilares">Os seis pilares <span>02</span></a><a href="#resultados">Resultados <span>03</span></a><a href="#sobre">O mentor <span>04</span></a><a href="/comunicado">Comunicado <span>05</span></a>
       <a href="/diagnostico" data-conversion="menu-mobile">Fazer meu diagnóstico <svg class="icon"><use href="#arrow-up"/></svg></a>
     </nav>
     <div class="reading-progress" aria-hidden="true"><span></span></div>
@@ -413,7 +413,7 @@
         if (event.matches) { document.documentElement.classList.remove('motion-ready'); observer.disconnect(); }
       });
     }
-    const navLinks = [...document.querySelectorAll('.desktop-nav a')];
+    const navLinks = [...document.querySelectorAll('.desktop-nav a[href^="#"]')];
     const sections = navLinks.map(link => document.querySelector(link.getAttribute('href')));
     const sectionObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
