@@ -5,3 +5,5 @@ server.js
 lp-marcelo/
 *.backup.html
 
+
+.vercel
